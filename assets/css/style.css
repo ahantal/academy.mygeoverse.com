@@ -526,3 +526,14 @@ body.modal-open { overflow: hidden; }
   .build .img-slot { min-height: 0; aspect-ratio: 4 / 3; }
   .ac-img-4 { object-position: 58% 40%; }
 }
+
+/* featured Discover Track (the main entry point) and track duration labels */
+.track-featured { max-width: 760px; margin: 40px auto 0; padding: 48px 44px; text-align: center; }
+.track-featured h3 { font-size: 1.5rem; }
+.track-featured p + p { margin-top: 12px; }
+.track-featured .btn-row { justify-content: center; }
+.track-meta { margin: 0 0 16px; }
+@media (max-width: 640px) {
+  .track-featured { padding: 32px 22px; }
+  .track-featured .track-meta { font-size: 0.7rem; letter-spacing: 0.04em; } /* keeps the duration label on one line */
+}
