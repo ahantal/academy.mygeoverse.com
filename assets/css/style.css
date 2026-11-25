@@ -537,3 +537,38 @@ body.modal-open { overflow: hidden; }
   .track-featured { padding: 32px 22px; }
   .track-featured .track-meta { font-size: 0.7rem; letter-spacing: 0.04em; } /* keeps the duration label on one line */
 }
+
+/* Open AR Cloud partnership (logo files used unchanged, not linked).
+   Hero: statement and logo on one row under the buttons. On desktop the row is taken out of the
+   text column's flow, so the column height (and the vertically centered photo) does not change. */
+.ac-hero .oarc-badge { display: flex; align-items: center; gap: 12px; width: fit-content; margin: 24px 0 0; font-size: 0.82rem; letter-spacing: 0.04em; color: var(--mgv-grey); }
+.ac-hero .oarc-badge { max-width: 100%; }
+.ac-hero .oarc-badge span { flex: none; white-space: nowrap; }
+.ac-hero .oarc-badge img { width: 250px; min-width: 0; flex: 0 1 auto; height: auto; } /* shrinks on narrow screens instead of overflowing */
+@media (min-width: 901px) {
+  .ac-hero .split > div:first-child { position: relative; }
+  .ac-hero .oarc-badge { position: absolute; left: 0; top: calc(100% + 24px); margin: 0; }
+  .ac-hero { padding-bottom: 136px; } /* room for the logo row; photo position and size unchanged */
+}
+/* Testbed: heading on the left, "In Partnership With" + logo on the right; wraps below the heading on small screens */
+.testbed-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px; margin-bottom: 20px; }
+.testbed-head h2 { margin: 0; }
+.oarc-with { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0; text-align: center; font-size: 0.85rem; letter-spacing: 0.06em; color: #cfdde9; }
+.oarc-with img { width: 231px; height: auto; } /* the file's natural size, as currently displayed */
+/* Testbed: benefit cards for OARC Testbed Partners (same translucent card style as the step row on navy) */
+.testbed .benefits { margin-top: 48px; }
+.testbed .benefits h3 { font-size: 1.25rem; margin-bottom: 20px; }
+.benefit-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit-card { display: flex; flex-direction: column; gap: 6px; padding: 24px 22px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 12px; }
+.benefit-card i { font-size: 26px; color: var(--mgv-orange); margin-bottom: 10px; }
+.benefit-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9fb9cc; }
+.benefit-card strong { font-size: 1.08rem; line-height: 1.35; color: #fff; }
+.benefit-sub { font-size: 0.95rem; color: #cfdde9; }
+@media (max-width: 700px) { .benefit-cards { grid-template-columns: 1fr; } }
+/* Discover: OARC Testbed partner benefit */
+.partner-benefit { margin-top: 40px; padding: 26px 28px; background: var(--mgv-light); border-left: 4px solid var(--mgv-orange); border-radius: 10px; }
+.partner-benefit h3 { font-size: 1.05rem; color: var(--mgv-navy); margin-bottom: 8px; }
+.partner-benefit p { margin: 0 0 12px; font-size: 0.97rem; }
+.partner-benefit a { font-weight: 700; }
+@media (max-width: 640px) { .partner-benefit { padding: 22px 20px; } }
+
